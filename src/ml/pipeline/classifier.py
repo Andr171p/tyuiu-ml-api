@@ -27,7 +27,8 @@ class Model(Transformer, BaseClassifier):
         return y
 
 
-'''from src.api_v1.schemas.applicant import ApplicantSchema
+'''
+from src.schemas.applicant import ApplicantSchema
 
 a = ApplicantSchema(
     gender="М",
@@ -38,12 +39,12 @@ a = ApplicantSchema(
 )
 b = ApplicantSchema(
     gender="М",
-    gpa=4.2,
+    gpa=4.5,
     priority=1,
-    points=231,
+    points=237,
     direction="09.03.01 Информатика и вычислительная техника"
 )
-ml = ModelPipeline()
+ml = Model()
 x = [a.model_dump(), b.model_dump()]
 d = ml.predict_proba(x)
 print([float(i[1]) for i in d])'''
