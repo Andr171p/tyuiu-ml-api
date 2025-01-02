@@ -27,9 +27,6 @@ class Model(Transformer, BaseClassifier):
         return y
 
 
-model_pipeline = Model()
-
-
 '''from src.api_v1.schemas.applicant import ApplicantSchema
 
 a = ApplicantSchema(
