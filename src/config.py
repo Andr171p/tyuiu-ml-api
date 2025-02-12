@@ -12,30 +12,12 @@ ENV_PATH: Path = BASE_DIR / ".env"
 load_dotenv(ENV_PATH)
 
 
-class ModelSettings(BaseSettings):
-    ohe: Path = BASE_DIR / "trained_models" / "one-hot-encoder.joblib"
-    scaler: Path = BASE_DIR / "trained_models" / "standard-scaler.joblib"
-    label: Path = BASE_DIR / "trained_models" / "label-encoder.joblib"
-    clf: Path = BASE_DIR / "trained_models" / "classifier.joblib"
-
-    class FeaturesSettings(BaseSettings):
-        label_feature: str = "gender"
-        ohe_feature: str = "direction"
-
-    features: FeaturesSettings = FeaturesSettings()
-
-
-class S3Settings(BaseSettings):
-    access_key: str = os.getenv("S3_ACCESS_KEY")
-    secret_key: str = os.getenv("S3_SECRET_KEY")
-    endpoint_url: str = os.getenv("S3_ENDPOINT_URL")
-
-    class BucketSettings(BaseSettings):
-        name: Literal["pipeline"] = "pipeline"
-
-        clf_file: Literal["classifier"] = "classifier"
-
-    bucket: BucketSettings = BucketSettings()
+class ModelsSettings(BaseSettings):
+    lb: Path = BASE_DIR / "models" / "label_binarizer.joblib"
+    le: Path = BASE_DIR / "models" / "label_encoder.joblib"
+    ohe: Path = BASE_DIR / "models" / "one_hot_encoder.joblib"
+    scaler: Path = BASE_DIR / "models" / "standard_scaler.joblib"
+    model: Path = BASE_DIR / "models" / "model.joblib"
 
 
 class APISettings(BaseSettings):
@@ -44,9 +26,8 @@ class APISettings(BaseSettings):
 
 
 class Settings(BaseSettings):
-    s3: S3Settings = S3Settings()
-    ml: ModelSettings = ModelSettings()
-    api_v1: APISettings = APISettings()
+    api: APISettings = APISettings()
+    models: ModelsSettings = ModelsSettings()
 
 
 settings = Settings()

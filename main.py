@@ -1,26 +1,13 @@
-import logging
-
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-
-from src.api_v1.routers import prediction_router
-
-from src.config import settings
+from src.model.transformer import TransformerFactory
+from src.model.model import ModelFactory
+from src.model.classifiers import Classifier
 
 
-logging.basicConfig(level=logging.INFO)
-
-
-app = FastAPI(
-    title=settings.api_v1.name,
+transformer_factory = TransformerFactory()
+transformer = transformer_factory.create_pipeline()
+model_factory = ModelFactory(
+    transformer=transformer,
+    classifier=Classifier()
 )
-
-app.include_router(prediction_router)
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+model = model_factory.create_pipeline()
+print(model)
