@@ -1,10 +1,10 @@
 from sklearn.pipeline import Pipeline
 
-from src.model.base import BasePipelineFactory
+from src.model.pipelines.base import BasePipelineFactory
 from src.model.classifiers import Classifier
 
 
-class ModelFactory(BasePipelineFactory):
+class ModelPipelineFactory(BasePipelineFactory):
     def __init__(
         self,
         transformer: Pipeline,
