@@ -18,11 +18,13 @@ class ModelService:
     def predict_applicant(self, applicant: ApplicantSchema) -> int:
         dataframe = convert_schema_to_dataframe(applicant)
         prediction = self._model.predict(dataframe)
+        log.info("Successfully predicted applicant")
         return int(prediction[0])
         
     def predict_applicants(self, applicants: List[ApplicantSchema]) -> List[int]:
         dataframe = convert_schemas_to_dataframe(applicants)
         predictions = self._model.predict(dataframe)
+        log.info("Successfully predicted applicants")
         return [int(prediction) for prediction in predictions]
         
     def predict_probability_of_applicant(
@@ -31,6 +33,7 @@ class ModelService:
     ) -> float:
         dataframe = convert_schema_to_dataframe(applicant)
         probability = self._model.predict_probability(dataframe)
+        log.info("Successfully predicted probability of applicant")
         return float(probability[0][-1])
     
     def predict_probabilities_of_applicants(
@@ -39,4 +42,5 @@ class ModelService:
     ) -> List[float]:
         dataframe = convert_schemas_to_dataframe(applicants)
         probabilities = self._model.predict_probability(dataframe)
+        log.info("Successfully predicted probabilities of applicants")
         return [float(probabitity[-1]) for probabitity in probabilities]
