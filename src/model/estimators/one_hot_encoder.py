@@ -15,12 +15,12 @@ class OneHotEncoder(BaseEstimator, TransformerMixin):
         self.column = column
 
     def fit(self, X: "DataFrame", y=None) -> "OneHotEncoder":
-        self._ohe.fit(X[self.column])
+        self._encoder.fit(X[self.column])
         return self
 
     def transform(self, X: "DataFrame", y=None) -> "DataFrame":
-        encoded = self._ohe.transform(X[self.column].to_numpy().reshape(-1, 1))
-        category_names = self._ohe.get_feature_names_out()
+        encoded = self._encoder.transform(X[self.column].to_numpy().reshape(-1, 1))
+        category_names = self._encoder.get_feature_names_out()
         for i, category_name in enumerate(category_names):
             X[f"{self.column}{category_name[2:]}"] = encoded[:, i]
         X.drop(columns=self.column, inplace=True)
