@@ -1,19 +1,19 @@
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from src.model.encoders import (
+    from src.model.estimators import (
         LabelBinarizer, 
         LabelEncoder, 
-        OneHotEncoder
+        OneHotEncoder,
+        StandardScaler
     )
-    from src.model.scalers import StandardScaler
 
 from sklearn.pipeline import Pipeline
 
 from src.model.pipelines.base import BasePipelineFactory
 
 
-class TransformerPipelineFactory(BasePipelineFactory):
+class TransformerFactory(BasePipelineFactory):
     def __init__(
         self,
         label_binarizer: "LabelBinarizer",
@@ -25,7 +25,3 @@ class TransformerPipelineFactory(BasePipelineFactory):
         self._label_encoder = label_encoder
         self._one_hot_encoder = one_hot_encoder
         self._standard_scaler = standard_scaler
-    
-    def create_pipeline(self) -> Pipeline:
-        steps = [(name, step) for name, step in self.__dict__.items()]
-        return Pipeline(steps)

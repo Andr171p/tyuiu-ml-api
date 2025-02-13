@@ -1,12 +1,7 @@
-from typing import TYPE_CHECKING
-
-if TYPE_CHECKING:
-    from sklearn.pipeline import Pipeline
-
-from abc import ABC, abstractmethod
+from sklearn.pipeline import Pipeline
 
 
-class BasePipelineFactory(ABC):
-    @abstractmethod
+class BasePipelineFactory:
     def create_pipeline(self) -> "Pipeline":
-        raise NotImplemented
+        steps = [(name, step) for name, step in self.__dict__.items()]
+        return Pipeline(steps)

@@ -1,7 +1,7 @@
 __all__ = (
-    "ModelPipelineFactory",
-    "TransformerPipelineFactory"
+    "ModelFactory",
+    "TransformerFactory"
 )
 
-from src.model.pipelines.model import ModelPipelineFactory
-from src.model.pipelines.transformer import TransformerPipelineFactory
+from src.model.pipelines.model import ModelFactory
+from src.model.pipelines.transformer import TransformerFactory

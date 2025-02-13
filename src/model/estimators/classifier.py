@@ -20,15 +20,15 @@ class Classifier(BaseEstimator, ClassifierMixin):
             X: Union["DataFrame", "ndarray"],
             y: Union["DataFrame", "ndarray"]
     ) -> "Classifier":
-        self._clf.fit(X, y)
+        self._model.fit(X, y)
         return self
 
     def predict(self, X: Union["DataFrame", "ndarray"]) -> Any:
         check_is_fitted(self, "_model")
-        y_pred =  self._clf.predict(X)
+        y_pred =  self._model.predict(X)
         return y_pred
 
     def predict_proba(self, X: Union["DataFrame", "ndarray"]) -> Any:
         check_is_fitted(self, "_model")
-        y_score = self._clf.predict_proba(X)
+        y_score = self._model.predict_proba(X)
         return y_score

@@ -1,10 +1,10 @@
 from sklearn.pipeline import Pipeline
 
 from src.model.pipelines.base import BasePipelineFactory
-from src.model.classifiers import Classifier
+from src.model.estimators import Classifier
 
 
-class ModelPipelineFactory(BasePipelineFactory):
+class ModelFactory(BasePipelineFactory):
     def __init__(
         self,
         transformer: Pipeline,
@@ -12,7 +12,3 @@ class ModelPipelineFactory(BasePipelineFactory):
     ) -> None:
         self._transformer = transformer
         self._classifier = classifier
-        
-    def create_pipeline(self) -> Pipeline:
-        steps = [(name, step) for name, step in self.__dict__.items()]
-        return Pipeline(steps=steps)
