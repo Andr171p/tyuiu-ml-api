@@ -8,7 +8,7 @@ from src.services import ModelService
 
 
 model_router = APIRouter(
-    prefix="api/v1/model",
+    prefix="/api/v1/model",
     route_class=DishkaRoute,
     tags=["Binary classification model"]
 )
