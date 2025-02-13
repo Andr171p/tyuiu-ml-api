@@ -1,17 +1,16 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from src.api_v1.lifespan import lifespan
-from src.api_v1.routers import prediction_router
+from dishka.integrations.fastapi import setup_dishka
+
+from src.api_v1.container import container
+from src.api_v1.routers import model_router
 from src.config import settings
 
 
-app = FastAPI(
-    title=settings.api_v1.name,
-    lifespan=lifespan
-)
+app = FastAPI()
 
-app.include_router(prediction_router)
+app.include_router(model_router)
 
 app.add_middleware(
     CORSMiddleware,
@@ -19,4 +18,9 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+)
+
+setup_dishka(
+    app=app,
+    container=container
 )

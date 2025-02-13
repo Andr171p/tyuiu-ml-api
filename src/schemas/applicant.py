@@ -1,4 +1,4 @@
-from typing import Literal
+from typing import Literal, List
 
 from pydantic import BaseModel
 
@@ -9,3 +9,7 @@ class ApplicantSchema(BaseModel):
     gpa: float
     points: int
     direction: str
+    
+    
+class ApplicantsSchema(BaseModel):
+    applicants: List[ApplicantSchema]

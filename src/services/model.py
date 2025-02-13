@@ -27,7 +27,7 @@ class ModelService:
         log.info("Successfully predicted applicants")
         return [int(prediction) for prediction in predictions]
         
-    def predict_probability_of_applicant(
+    def predict_applicant_probability(
         self, 
         applicant: ApplicantSchema
     ) -> float:
@@ -36,7 +36,7 @@ class ModelService:
         log.info("Successfully predicted probability of applicant")
         return float(probability[0][-1])
     
-    def predict_probabilities_of_applicants(
+    def predict_applicants_probabilities(
         self, 
         applicants: List[ApplicantSchema]
     ) -> List[float]:

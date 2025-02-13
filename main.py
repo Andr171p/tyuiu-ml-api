@@ -17,5 +17,5 @@ applicant_1 = ApplicantSchema(
     direction="27.03.04 Управление в технических системах"
 )
 model_service = ModelService()
-pred = model_service.predict_probability_of_applicant(applicant)
+pred = model_service.predict_applicant_probability(applicant)
 print(pred)
