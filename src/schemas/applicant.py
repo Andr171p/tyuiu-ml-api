@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 class ApplicantSchema(BaseModel):
     year: int
-    gender: Literal["М", "Ж"]
+    gender: Literal["male", "female"]
     gpa: float
     points: int
     direction: str

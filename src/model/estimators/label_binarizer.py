@@ -18,5 +18,7 @@ class LabelBinarizer(BaseEstimator, TransformerMixin):
         return self
         
     def transform(self, X: "DataFrame", y=None) -> "DataFrame":
+        gender_map = {"male": "М", "female": "Ж"}
+        X["gender"] = X["gender"].apply(lambda x: gender_map[x])
         X["gender"] = self._binarizer.transform(X["gender"])
         return X
