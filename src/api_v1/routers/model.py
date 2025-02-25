@@ -31,7 +31,7 @@ async def predict_applicants_probabilities(
     applicants: ApplicantsSchema,
     model_service: FromDishka[ModelService]
 ) -> JSONResponse:
-    probabilities = model_service.predict_applicants_probabilities(applicants)
+    probabilities = model_service.predict_applicants_probabilities(applicants.applicants)
     return JSONResponse(
         status_code=status.HTTP_200_OK,
         content={"probabilities": probabilities}
