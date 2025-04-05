@@ -43,4 +43,4 @@ class ModelService:
         dataframe = convert_schemas_to_dataframe(applicants)
         probabilities = self._model.predict_probability(dataframe)
         log.info("Successfully predicted probabilities of applicants")
-        return [float(probabitity[-1]) for probabitity in probabilities]
+        return [float(probability[-1]) for probability in probabilities]
