@@ -4,8 +4,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444ccf20-8f25-4bb4-807e-0561ca9ac84f" name="Changes" comment="[tyuiu-ml-api] 03.01.2025 add classifier">
+    <list default="true" id="444ccf20-8f25-4bb4-807e-0561ca9ac84f" name="Changes" comment="05.04.2025 refactor model service">
+      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/classifier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/constants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/estimators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/ioc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/schemas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TyuiuBinClfAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TyuiuBinClfAPI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/label_binarizer.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/fitted_models/label_binarizer.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/label_encoder.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/fitted_models/label_encoder.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/fitted_models/classifier.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model_compressed.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/fitted_models/classifier_compressed.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/one_hot_encoder.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/fitted_models/one_hot_encoder.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/standard_scaler.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/fitted_models/standard_scaler.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tyuiu_classifier/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/container.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/lifespan.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/providers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/providers/model_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/misc/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/misc/converters.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/estimators/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/estimators/classifier.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/estimators/label_binarizer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/estimators/label_encoder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/estimators/one_hot_encoder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/estimators/standard_scaler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/model_provider.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/pipelines/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/pipelines/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/pipelines/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/pipelines/transformer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/applicant.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/model.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +70,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Andr171p&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Andr171p/tyuiu-ml-api.git&quot;,
+    &quot;accountId&quot;: &quot;7414caab-e221-4c0c-a921-3f5c2dccf18f&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -31,21 +91,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.classifier.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/TyuiuBinClfAPI/trained_models&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.classifier.executor": "Run",
+    "Python.constants.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.settings.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/andre/TyuiuBinClfAPI"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\andre\TyuiuBinClfAPI\trained_models" />
       <recent name="C:\Users\andre\TyuiuBinClfAPI" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="classifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TyuiuBinClfAPI" />
       <option name="ENV_FILES" value="" />
@@ -68,8 +133,77 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="constants" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TyuiuBinClfAPI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tyuiu_classifier" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/tyuiu_classifier/constants.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TyuiuBinClfAPI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TyuiuBinClfAPI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tyuiu_classifier" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/tyuiu_classifier/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.settings" />
+        <item itemvalue="Python.constants" />
         <item itemvalue="Python.classifier" />
       </list>
     </recent_temporary>
@@ -77,7 +211,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+        <option value="bundled-python-sdk-4f4e415b4190-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.26053.29" />
       </set>
     </attachedChunks>
   </component>
@@ -138,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735848623358</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="05.04.2025 refactor model service">
+      <option name="closed" value="true" />
+      <created>1743855050679</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743855050679</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -147,6 +289,7 @@
     <MESSAGE value="[tyuiu-ml-api] 02.01.2025 log" />
     <MESSAGE value="[tyuiu-ml-api] 03.01.2025" />
     <MESSAGE value="[tyuiu-ml-api] 03.01.2025 add classifier" />
-    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-ml-api] 03.01.2025 add classifier" />
+    <MESSAGE value="05.04.2025 refactor model service" />
+    <option name="LAST_COMMIT_MESSAGE" value="05.04.2025 refactor model service" />
   </component>
 </project>
