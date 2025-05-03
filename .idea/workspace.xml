@@ -4,56 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444ccf20-8f25-4bb4-807e-0561ca9ac84f" name="Changes" comment="05.04.2025 refactor model service">
-      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/classifier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/constants.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/estimators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/ioc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/schemas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tyuiu_classifier/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TyuiuBinClfAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TyuiuBinClfAPI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/label_binarizer.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/fitted_models/label_binarizer.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/label_encoder.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/fitted_models/label_encoder.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/fitted_models/classifier.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/model_compressed.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/fitted_models/classifier_compressed.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/one_hot_encoder.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/fitted_models/one_hot_encoder.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/standard_scaler.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/fitted_models/standard_scaler.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tyuiu_classifier/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/container.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/lifespan.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/providers/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/providers/model_service.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/misc/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/misc/converters.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/estimators/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/estimators/classifier.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/estimators/label_binarizer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/estimators/label_encoder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/estimators/one_hot_encoder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/estimators/standard_scaler.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/model_provider.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/pipelines/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/pipelines/base.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/pipelines/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/pipelines/transformer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas/applicant.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/model.py" beforeDir="false" />
+    <list default="true" id="444ccf20-8f25-4bb4-807e-0561ca9ac84f" name="Changes" comment="03.05.2025 refactoring application">
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743855050679</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="03.05.2025 refactoring application">
+      <option name="closed" value="true" />
+      <created>1746275400391</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1746275400391</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -290,6 +250,7 @@
     <MESSAGE value="[tyuiu-ml-api] 03.01.2025" />
     <MESSAGE value="[tyuiu-ml-api] 03.01.2025 add classifier" />
     <MESSAGE value="05.04.2025 refactor model service" />
-    <option name="LAST_COMMIT_MESSAGE" value="05.04.2025 refactor model service" />
+    <MESSAGE value="03.05.2025 refactoring application" />
+    <option name="LAST_COMMIT_MESSAGE" value="03.05.2025 refactoring application" />
   </component>
 </project>
