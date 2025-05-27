@@ -1,5 +1,3 @@
-from typing import List
-
 from sklearn.pipeline import Pipeline
 
 from .schemas import Applicant, Applicants
@@ -38,7 +36,7 @@ class BinaryClassifier:
         proba = self.pipeline.predict_proba(df)
         return float(proba[0][-1])
 
-    def predict_batch(self, applicants: Applicants) -> List[float]:
+    def predict_batch(self, applicants: Applicants) -> list[float]:
         df = applicants.to_df()
         probas = self.pipeline.predict_proba(df)
         return [float(proba[-1]) for proba in probas]
