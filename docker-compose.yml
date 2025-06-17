@@ -1,0 +1,7 @@
+services:
+  tyuiu_classifier:
+    build: .
+    ports:
+      - "8080:8000"
+    volumes:
+      - .:/tyuiu_classifier
