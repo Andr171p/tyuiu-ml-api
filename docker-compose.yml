@@ -1,5 +1,5 @@
 services:
-  tyuiu_classifier:
+  app:
     build: .
     ports:
       - "8080:8000"
